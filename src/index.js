@@ -21,7 +21,7 @@ const routing = (
     <PageHeader />
     <CssBaseline />
     <Container
-      maxWidth='xl'
+      maxWidth='false'
       disableGutters={true}
     >
       <main>

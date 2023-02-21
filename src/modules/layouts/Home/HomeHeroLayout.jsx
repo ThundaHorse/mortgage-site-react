@@ -5,6 +5,8 @@ import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 
+import Image from 'mui-image';
+
 const HomeHeroLayoutRoot = styled('section')(({ theme }) => ({
   color: theme.palette.common.white,
   position: 'relative',
@@ -63,28 +65,22 @@ function HomeHeroLayout(props) {
         />
         <Background sx={sxBackground} />
 
-        <img
-          src='/assets/images/danny-full-body.webp'
-          alt='full-body'
-          id='hero-image'
-          width='40%'
-          style={{
-            position: 'absolute',
-            right: '0',
-            bottom: '0',
-            filter: 'blur(0.5px)',
-            zIndex: '-1',
-          }}
-        />
-
-        <Box
-          component='img'
-          src='/static/themes/onepirate/productHeroArrowDown.png'
-          height='16'
-          width='12'
-          alt='arrow down'
-          sx={{ position: 'absolute', bottom: 32 }}
-        />
+        <Box>
+          <Image
+            alt='hero image'
+            src='/assets/images/danny-full-body.webp'
+            fit='contain'
+            easing='ease-in'
+            duration={500}
+            position='absolute'
+            sx={{
+              right: 0,
+              bottom: 0,
+              zIndex: -1,
+              width: { xs: 'auto', sm: 'auto', md: 'auto !important' },
+            }}
+          />
+        </Box>
       </Container>
     </HomeHeroLayoutRoot>
   );
