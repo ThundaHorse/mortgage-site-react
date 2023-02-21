@@ -1,15 +1,59 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { createRoot } from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+// Main style
+import './styles/main.scss';
+
+// MUI
+import CssBaseline from '@mui/material/CssBaseline';
+
+// Routing
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// Components
+import { PageHeader } from './modules/PageHeader/PageHeader';
+import { Home, Media, LearnMore, About, Reviews } from './pages/index';
+import { Container } from '@mui/system';
+
+const routing = (
+  <Router>
+    <PageHeader />
+    <CssBaseline />
+    <Container
+      maxWidth='xl'
+      disableGutters={true}
+    >
+      <main>
+        <Routes>
+          <Route
+            path='/'
+            element={<Home />}
+          />
+          <Route
+            path='/media'
+            element={<Media />}
+          />
+          <Route
+            path='/learn-more'
+            element={<LearnMore />}
+          />
+          <Route
+            path='/about'
+            element={<About />}
+          />
+          <Route
+            path='/reviews'
+            element={<Reviews />}
+          />
+        </Routes>
+      </main>
+    </Container>
+  </Router>
 );
+
+const root = createRoot(document.getElementById('root'));
+root.render(routing);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
