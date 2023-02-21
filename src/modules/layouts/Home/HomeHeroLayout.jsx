@@ -71,7 +71,7 @@ function HomeHeroLayout(props) {
             src='/assets/images/danny-full-body.webp'
             fit='contain'
             easing='ease-in'
-            duration={500}
+            duration={1000}
             position='absolute'
             sx={{
               right: 0,

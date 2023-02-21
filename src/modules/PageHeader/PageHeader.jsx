@@ -47,10 +47,10 @@ export const PageHeader = () => {
             <Link
               variant='h6'
               underline='none'
-              href='/media'
+              href='/reviews'
               sx={{ ...rightLink }}
             >
-              {'Media'}
+              {'Reviews'}
             </Link>
           </Box>
 
