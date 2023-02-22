@@ -1,4 +1,3 @@
-// import { Home } from './Home';
 import Home from './Home';
 import { Media } from './Media';
 import { LearnMore } from './LearnMore';

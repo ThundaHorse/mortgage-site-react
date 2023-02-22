@@ -16,6 +16,8 @@ import { PageHeader } from './modules/PageHeader/PageHeader';
 import { Home, Media, LearnMore, About, Reviews } from './pages/index';
 import { Container } from '@mui/system';
 
+import { CookiesProvider } from 'react-cookie';
+
 const routing = (
   <Router>
     <PageHeader />
@@ -24,30 +26,32 @@ const routing = (
       maxWidth='false'
       disableGutters={true}
     >
-      <main>
-        <Routes>
-          <Route
-            path='/'
-            element={<Home />}
-          />
-          <Route
-            path='/media'
-            element={<Media />}
-          />
-          <Route
-            path='/learn-more'
-            element={<LearnMore />}
-          />
-          <Route
-            path='/about'
-            element={<About />}
-          />
-          <Route
-            path='/reviews'
-            element={<Reviews />}
-          />
-        </Routes>
-      </main>
+      <CookiesProvider>
+        <main>
+          <Routes>
+            <Route
+              path='/'
+              element={<Home />}
+            />
+            <Route
+              path='/media'
+              element={<Media />}
+            />
+            <Route
+              path='/learn-more'
+              element={<LearnMore />}
+            />
+            <Route
+              path='/about'
+              element={<About />}
+            />
+            <Route
+              path='/reviews'
+              element={<Reviews />}
+            />
+          </Routes>
+        </main>
+      </CookiesProvider>
     </Container>
   </Router>
 );
