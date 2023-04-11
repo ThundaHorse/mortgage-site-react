@@ -95,12 +95,6 @@ export const PageFooter = () => {
               duration={0}
               sx={{ width: '50px !important' }}
             />
-            {/* <Typography
-              color='textSecondary'
-              variant='subtitle1'
-            >
-              {`${new Date().getFullYear()} | Mortgage Select`}
-            </Typography> */}
           </Grid>
 
           <Grid
