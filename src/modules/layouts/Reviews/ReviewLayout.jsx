@@ -11,14 +11,11 @@ export const ReviewSection = () => {
       const url = `${process.env.REACT_APP_API_URL}&partnerId=${process.env.REACT_APP_PARTNER_ID}&nmlsId=${process.env.REACT_APP_NMLS_ID}&reviewLimit=10`;
       const alreadyFetched = cookies.fetchedReviews;
 
-      console.log(cookies);
-
       let now = new Date();
       let time = now.getTime();
       time += 100 * 100;
       now.setTime(time);
 
-      console.log(now.toUTCString());
       if (!alreadyFetched) {
         removeCookie('fetchedReviews');
         localStorage.clear();

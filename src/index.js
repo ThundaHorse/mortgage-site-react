@@ -7,14 +7,15 @@ import './styles/main.scss';
 
 // MUI
 import CssBaseline from '@mui/material/CssBaseline';
+import { Container } from '@mui/system';
 
 // Routing
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Components
 import { PageHeader } from './modules/PageHeader/PageHeader';
+import { PageFooter } from './modules/PageFooter/PageFooter';
 import { Home, Media, LearnMore, About, Reviews } from './pages/index';
-import { Container } from '@mui/system';
 
 import { CookiesProvider } from 'react-cookie';
 
@@ -53,6 +54,7 @@ const routing = (
         </main>
       </CookiesProvider>
     </Container>
+    <PageFooter />
   </Router>
 );
 
