@@ -15,7 +15,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // Components
 import { PageHeader } from './modules/PageHeader/PageHeader';
 import { PageFooter } from './modules/PageFooter/PageFooter';
-import { Home, Media, LearnMore, About, Reviews } from './pages/index';
+import {
+  Home,
+  Media,
+  LearnMore,
+  About,
+  Reviews,
+  PrivacyPolicy,
+} from './pages/index';
 
 import { CookiesProvider } from 'react-cookie';
 
@@ -49,6 +56,10 @@ const routing = (
             <Route
               path='/reviews'
               element={<Reviews />}
+            />
+            <Route
+              path='/privacy-policy'
+              element={<PrivacyPolicy />}
             />
           </Routes>
         </main>
