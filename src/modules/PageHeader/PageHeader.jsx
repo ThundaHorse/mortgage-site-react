@@ -27,24 +27,6 @@ export const PageHeader = () => {
               {'Home'}
             </Link>
             <Link
-              color='inherit'
-              variant='h6'
-              underline='none'
-              href='/media'
-              sx={rightLink}
-            >
-              {'Media'}
-            </Link>
-            <Link
-              color='inherit'
-              variant='h6'
-              underline='none'
-              href='/about'
-              sx={rightLink}
-            >
-              {'About'}
-            </Link>
-            <Link
               variant='h6'
               underline='none'
               href='/reviews'

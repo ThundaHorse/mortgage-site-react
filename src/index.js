@@ -15,14 +15,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // Components
 import { PageHeader } from './modules/PageHeader/PageHeader';
 import { PageFooter } from './modules/PageFooter/PageFooter';
-import {
-  Home,
-  Media,
-  LearnMore,
-  About,
-  Reviews,
-  PrivacyPolicy,
-} from './pages/index';
+import { Home, LearnMore, Reviews, PrivacyPolicy } from './pages/index';
 
 import { CookiesProvider } from 'react-cookie';
 
@@ -42,16 +35,8 @@ const routing = (
               element={<Home />}
             />
             <Route
-              path='/media'
-              element={<Media />}
-            />
-            <Route
               path='/learn-more'
               element={<LearnMore />}
-            />
-            <Route
-              path='/about'
-              element={<About />}
             />
             <Route
               path='/reviews'
