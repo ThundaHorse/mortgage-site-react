@@ -23,10 +23,12 @@ const Background = styled(Box)({
   position: 'absolute',
   left: 0,
   right: 0,
-  top: 0,
+  top: '-100px',
   bottom: 0,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
+  backgroundAttachment: 'scroll',
+  backgroundPosition: 'top left',
   zIndex: -2,
 });
 
@@ -44,12 +46,6 @@ function HomeHeroLayout(props) {
           alignItems: 'center',
         }}
       >
-        <img
-          src='/assets/images/heroW.png'
-          alt='wonder'
-          width='147'
-          height='80'
-        />
         {children}
         <Box
           sx={{
@@ -78,6 +74,11 @@ function HomeHeroLayout(props) {
               bottom: 0,
               zIndex: -1,
               width: { xs: 'auto', sm: 'auto', md: 'auto !important' },
+              display: {
+                xs: 'none',
+                sm: 'none',
+                md: 'flex',
+              },
             }}
           />
         </Box>

@@ -2,7 +2,8 @@ import * as React from 'react';
 import HomeHeroLayout from '../../layouts/Home/HomeHeroLayout';
 import Typography from '../../util/Typography';
 
-const backgroundImage = '/assets/images/test.avif';
+// const backgroundImage = '/assets/images/test.avif';
+const backgroundImage = '/assets/images/half-circle-bg.png';
 
 export default function HomeHero() {
   return (
@@ -10,7 +11,10 @@ export default function HomeHero() {
       sxBackground={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundColor: '#7fc7d9',
-        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundPosition: 'top aboslute',
+        backgroundAttachment: 'scroll',
+        backgroundRepeat: 'no-repeat',
       }}
     >
       <img
